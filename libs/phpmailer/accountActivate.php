@@ -34,7 +34,7 @@ $mail->Body    =
                                   height:auto;
                                   width:100%;">
           <div style="
-             background-color:#333244;
+             background-color:#e44c2a;
              display:inline-block;
              width:100%;
              height:auto;
@@ -43,13 +43,15 @@ $mail->Body    =
              align-content:center;
              ">
             <div align="center" style="padding:10px;" >
-              
+              <img src="http://sohigh.com.ve/salsamora2/images/logo.png">
             </div>
           </div>
 
-          <div style="color:#4a4646; padding:20px;" align="left">
+          <div style="color:#e44c2a; padding:20px;" align="left">
             <br/>
-            Restaurante Salsa Mora, Te escribe :   <b>'.$_POST['name'].'</b>.
+            Restaurante Salsa Mora, Te escribe  :   <b>'.$_POST['name'].'</b>.
+            
+
                     
           </div>
           
@@ -68,7 +70,7 @@ $mail->Body    =
               </tr>
               <tr>
                <td>telefono:</td>
-               <td style="background-color:#7de7fe4d;ali:5px;border-radius:5px; border-radius: 10px;" align="center"><h3>'.$_POST['phone'].'</h3>
+               <h3>'.$_POST['phone'].'</h3>
                </td>
               </tr>
               <tr>

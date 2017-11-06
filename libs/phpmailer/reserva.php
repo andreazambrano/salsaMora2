@@ -15,7 +15,7 @@ $mail->Port = 465;          //587                          // TCP port to connec
 
 
 //echo $email= $_POST['n2']."@".$_POST['n3'];
-$mail->setFrom('support@thetixs.com', 'The|tixs [Support]');
+$mail->setFrom('support@thetixs.com', 'Restaurante Salsa Mora [Reservacion]');
 //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 $mail->addAddress('andreyzf20@gmail.com');              // Name is optional
 //$mail->addReplyTo('$email','roshan');
@@ -34,7 +34,7 @@ $mail->Body    =
                                   height:auto;
                                   width:100%;">
           <div style="
-             background-color:#333244;
+             background-color:#e44c2a;
              display:inline-block;
              width:100%;
              height:auto;
@@ -43,11 +43,11 @@ $mail->Body    =
              align-content:center;
              ">
             <div align="center" style="padding:10px;" >
-              <img src="http://52.39.15.75/manager.thetixs.com/img/l.png">
+              <img src="http://sohigh.com.ve/salsamora2/images/logo.png">
             </div>
           </div>
 
-          <div style="color:#4a4646; padding:20px;" align="left">
+          <div style="color:#e44c2a; padding:20px;" align="left">
             <br/>
            <b>'.$_POST['name'].'</b>, 
                     
@@ -72,7 +72,7 @@ $mail->Body    =
               </tr>
               <tr>
                <td>telefono:</td>
-               <td style="background-color:#7de7fe4d;ali:5px;border-radius:5px; border-radius: 10px;" align="center"><h3>'.$_POST['phone'].'</h3>
+               <h3>'.$_POST['phone'].'</h3>
                </td>
               </tr>
               <tr>
