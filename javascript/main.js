@@ -335,213 +335,213 @@
         };
     };
   
-    var googleMap = function() {
-        if ( $().gmap3 ) {
-            $("#flat-map").gmap3({
-                map:{
-                    options:{
-                        mapTypeControl:false,
-                        zoomControl:false,
-                        zoom: 11,
-                        mapTypeId: 'arch_style',
-                        mapTypeControlOptions: {
-                            mapTypeIds: ['arch_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
-                        },
-                        scrollwheel: false
-                    }
-                },
-                getlatlng:{
-                    address:  "PO Box 97845 Baker st. 567, Los Angeles, California, United States",
-                    callback: function(results) {
-                        if ( !results ) return;
-                        $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                        $(this).gmap3({
-                            marker:{
-                                latLng:results[0].geometry.location,
-                                options:{
-                                    visible:false,
-                                    icon: 'http://themesflat.com/html/arch/images/icon/marker.png'
-                                }
-                            }
-                        });
-                    }
-                },
-                styledmaptype:{
-                    id: "arch_style",
-                    options:{
-                        name: "Arch Map"
-                    }, 
-                    styles: [
-                            {
-                                "featureType": "all",
-                                "elementType": "labels.text.fill",
-                                "stylers": [
-                                    {
-                                        "saturation": 36
-                                    },
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 40
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "all",
-                                "elementType": "labels.text.stroke",
-                                "stylers": [
-                                    {
-                                        "visibility": "on"
-                                    },
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 16
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "all",
-                                "elementType": "labels.icon",
-                                "stylers": [
-                                    {
-                                        "visibility": "off"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative",
-                                "elementType": "geometry.fill",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 20
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative",
-                                "elementType": "geometry.stroke",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    },
-                                    {
-                                        "weight": 1.2
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "landscape",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 20
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 21
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "geometry.fill",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "geometry.stroke",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 29
-                                    },
-                                    {
-                                        "weight": 0.2
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.arterial",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 18
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.local",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 16
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "transit",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 19
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    }
-                                ]
-                            }
-                        ]
-                },
-            });
-        }
-    }; 
+    // var googleMap = function() {
+    //     if ( $().gmap3 ) {
+    //         $("#flat-map").gmap3({
+    //             map:{
+    //                 options:{
+    //                     mapTypeControl:false,
+    //                     zoomControl:false,
+    //                     zoom: 11,
+    //                     mapTypeId: 'arch_style',
+    //                     mapTypeControlOptions: {
+    //                         mapTypeIds: ['arch_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
+    //                     },
+    //                     scrollwheel: false
+    //                 }
+    //             },
+    //             getlatlng:{
+    //                 address:  "PO Box 97845 Baker st. 567, Los Angeles, California, United States",
+    //                 callback: function(results) {
+    //                     if ( !results ) return;
+    //                     $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+    //                     $(this).gmap3({
+    //                         marker:{
+    //                             latLng:results[0].geometry.location,
+    //                             options:{
+    //                                 visible:false,
+    //                                 icon: 'http://themesflat.com/html/arch/images/icon/marker.png'
+    //                             }
+    //                         }
+    //                     });
+    //                 }
+    //             },
+    //             styledmaptype:{
+    //                 id: "arch_style",
+    //                 options:{
+    //                     name: "Arch Map"
+    //                 }, 
+    //                 styles: [
+    //                         {
+    //                             "featureType": "all",
+    //                             "elementType": "labels.text.fill",
+    //                             "stylers": [
+    //                                 {
+    //                                     "saturation": 36
+    //                                 },
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 40
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "all",
+    //                             "elementType": "labels.text.stroke",
+    //                             "stylers": [
+    //                                 {
+    //                                     "visibility": "on"
+    //                                 },
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 16
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "all",
+    //                             "elementType": "labels.icon",
+    //                             "stylers": [
+    //                                 {
+    //                                     "visibility": "off"
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "administrative",
+    //                             "elementType": "geometry.fill",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 20
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "administrative",
+    //                             "elementType": "geometry.stroke",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 17
+    //                                 },
+    //                                 {
+    //                                     "weight": 1.2
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "landscape",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 20
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "poi",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 21
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "road.highway",
+    //                             "elementType": "geometry.fill",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 17
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "road.highway",
+    //                             "elementType": "geometry.stroke",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 29
+    //                                 },
+    //                                 {
+    //                                     "weight": 0.2
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "road.arterial",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 18
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "road.local",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 16
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "transit",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 19
+    //                                 }
+    //                             ]
+    //                         },
+    //                         {
+    //                             "featureType": "water",
+    //                             "elementType": "geometry",
+    //                             "stylers": [
+    //                                 {
+    //                                     "color": "#000000"
+    //                                 },
+    //                                 {
+    //                                     "lightness": 17
+    //                                 }
+    //                             ]
+    //                         }
+    //                     ]
+    //             },
+    //         });
+    //     }
+    // }; 
 
     var productSlide = function() {
         $('.flat-product-single-slider').each(function(){
@@ -824,7 +824,7 @@
         }  
         counter();
         responsiveMenu();        
-        googleMap(); 
+        // googleMap(); 
         flatClient();
         goTop();  
         date_time();
